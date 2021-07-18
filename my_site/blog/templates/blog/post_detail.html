@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title_block %}This post title{% endblock %}
+
+{% block css_files%}
+  <!-- <link rel="stylesheet" href="{% static 'blog/home.css' %}"> -->
+  <link rel="stylesheet" href="{% static 'blog/post_detail.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+  <section id="summary">
+    <h2>{{ po_detail.title }}</h2>
+    <hr>
+    <div class="tags">
+      {% for tag in tag_content %}
+        <span>{{tag}}{{' '}}</span>
+      {% endfor %}
+    </div>
+    <article class="">
+      <img src="{% static 'blog/images/'|add:po_detail.image_name %}" alt="Post Title">
+      <address class="">
+        <a href="mailto:{{ email }}?subject=feedback">{{ po_detail.author }}</a>
+
+      </address>
+      <div class="">
+        Last updated on <time>{{ po_detail.date|date:'d M Y' }}</time>
+      </div>
+    </article>
+  </section>
+
+  <main>
+    {{ po_detail.content|linebreaks }}
+  </main>
+
+{% endblock %}

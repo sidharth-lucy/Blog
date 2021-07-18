@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title_block %}Home-Blog{% endblock %}
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'blog/home.css' %}">
+  <link rel="stylesheet" href="{% static 'blog/post.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+
+  <section id="welcome">
+    <header>
+      <img src="{% static 'blog/images/myimg.jpg' %}" alt="Lucy'Image">
+      <h2>Lucyfer's Blog</h2>
+    </header>
+    <p>Hi I'am Lucy and i love to Blog</p>
+  </section>
+
+  <section id="latest-post">
+    <h2>My latest posts</h2>
+
+    <ul>
+      {% for po in post_l %}
+        {% include 'blog/includes/post.html' %}
+      {% endfor %}
+    </ul>
+
+  </section>
+
+
+  <section id="about">
+    <h2>What i do ?</h2>
+    <p>
+    I love to do coding and learning new things , i
+    also like to do photography
+    </p>
+    <p>
+      I want to became a good developer so i am doing the coding
+      practice..
+    </p>
+
+  </section>
+
+{% endblock %}

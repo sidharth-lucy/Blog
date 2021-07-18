@@ -1,0 +1,84 @@
+
+/* #6305dd,#390281 */
+#welcome{
+  background: linear-gradient(to left top,green,yellow);
+  padding: 5rem 16%;
+  /* border-radius: 10rem; */
+}
+
+#welcome header{
+  display: flex;
+  align-items: center;
+  margin: 1rem auto;
+}
+
+#welcome img{
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid blue;
+  background-color: pink;
+  transform: rotateZ(-5deg);
+  box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.5);
+
+}
+
+#welcome h2{
+  font-size: 3.5;
+  margin-left: 0 0 0 2rem;
+  color: blue;
+  width: 10rem;
+
+}
+
+#welcome p{
+  color: white;
+  font-size: 1.5rem;
+}
+
+#latest-post{
+  background-color: pink;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 60rem;
+  margin: -4rem auto 2rem auto;
+  box-shadow: 1rem 0.5rem 1rem  rgba(129, 31, 209, 0.5);
+
+}
+
+#latest-post h2{
+  text-align: center;
+}
+
+#latest-post ul{
+  list-style: none;
+  margin:0;
+  padding: 1rem;
+  display:flex;
+  /* max-width: 60rem; */
+  max-height: 40rem;
+  grid-gap: 1rem;
+}
+#latest-post li{
+  flex: 1;
+  /* margin: 1rem 1rem 1rem 1rem; */
+
+}
+
+#about{
+  text-align: center;
+  padding: 3rem;
+  background-color:  #a9eaef;
+  margin: 5rem;
+
+}
+
+#about h2{
+  font-size: 2rem;
+  font-weight:
+}
+#about p{
+  font-size: 1.5rem;
+  color:#81b011;
+}
