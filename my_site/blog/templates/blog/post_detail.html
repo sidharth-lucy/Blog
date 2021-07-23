@@ -20,7 +20,8 @@
       {% endfor %}
     </div>
     <article class="">
-      <img src="{% static 'blog/images/'|add:po_detail.image_name %}" alt="Post Title">
+      {% comment %} <img src="{% static 'blog/images/'|add:po_detail.image_name %}" alt="Post Title"> {% endcomment %}
+      <img src="{{ po_detail.image_name.url }}" alt="Post Title">
       <address class="">
         <a href="mailto:{{ email }}?subject=feedback">{{ po_detail.author }}</a>
 
@@ -36,3 +37,4 @@
   </main>
 
 {% endblock %}
+
